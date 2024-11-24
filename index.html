@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stone-Paper-Scissor</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div class="main">
+<!-- ============================================================================| SCORE BOARD |=========================================================================== -->
+        <div class="board">
+            <div id="title">
+                <p>ROCK</p>
+                <p>PAPER</p>
+                <p>SCISSORS</p>
+            </div>
+            <div class="score">
+                <div id="computer">
+                    <p>COMPUTER SCORE</p>
+                    <p id="computer-score">0</p>
+                </div>
+                <div id="player">
+                    <p>YOUR <br>SCORE</p>
+                    <p id="player-score">0</p>
+                </div>
+            </div>
+        </div>
+
+<!-- ============================================================================| PLAY BOARD |=========================================================================== -->
+        <div class="gameBoard">
+            <div id="rock" class="center-png" onclick="GameStart('Rock')">
+                <img src="images/stone.png">
+            </div>
+            <hr class="new1">
+            <div id="scissor" class="center-png" onclick="GameStart('Scissor')">
+                <img src="images/scissor.png" alt="paper">
+            </div>
+            <hr class="new2">
+            <div id="paper" class="center-png" onclick="GameStart('Paper')">
+                <img src="images/paper.png" alt="scissor">
+            </div>
+            <hr class="new3">
+        </div>
+
+<!-- ============================================================================| RESULT BOARD |=========================================================================== -->
+        <div class="display-result center-png">
+            <div class="pick-block">
+                <p>YOU PICKED</p>
+                <div class="win-boxes">
+                </div>  
+            </div>
+            <div class="pick-block">
+                <h3 id="status"></h3>
+                <h4>AGAINST PC</h4>
+                <button id="PlayAgain">PLAY AGAIN</button>
+                <button id="Replay">REPLAY</button>
+            </div>
+            <div class="pick-block">
+                <p>PC PICKED</p>
+                <div class="win-boxes-cmp">
+                </div>  
+            </div>
+        </div>
+
+<!-- ============================================================================| BUTTONS |=========================================================================== -->
+        <div class="buttons">
+            <button id="showRules" onclick="showRules()">RULES</button>
+            <button id="next" onclick="displayWinner()">NEXT</button>
+        </div>
+
+<!-- ============================================================================| RULES MODAL |======================================================================== -->
+        <div class="Rules">
+            <div id="close-btn" onclick="closeRule()">X</div>
+            <h2>Game Rules</h2>
+            <ul>
+                <li>Rock beats scissors, scissors beat paper, and paper beats rock.</li>
+                <li>Agree ahead of time whether you’ll count off “rock, paper, scissors, shoot” or just “rock, paper,
+                    scissors.”</li>
+                <li>Use rock, paper, scissors to settle minor decisions or simply play to pass the time</li>
+                <li>If both players lay down the same hand, each player lays down another hand</li>
+            </ul>
+        </div>
+    </div>
+
+<!-- ============================================================================| WON GAME |=========================================================================== -->
+    <div class="Winner">
+        <div class="winBoard">
+            <img src="images/trophy.png" alt="Trophy">
+            <img src="images/stars.png" alt="stars">
+        </div>
+        <div class="wishes">
+            <h2>HURRAY!!</h2>
+            <h3>YOU WON THE GAME</h3>
+        </div>
+        <button id="AgainPlay">PLAY AGAIN</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
